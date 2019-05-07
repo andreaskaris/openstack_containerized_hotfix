@@ -1,21 +1,26 @@
-# Procedure
+This is an easy process: 
 
-This is an easy 4 step process:
-i) Modify configuration
-ii) Generate install scripts
-iii) Place RPMs in rpms/
-iv) Run install scripts 
+* Modify configuration file `config.yaml`.
 
-# i) Configuration
-
-Modify file config.yaml and change parameters according to your requirements
-
-# ii) Generation of install scripts
-
-Run this script:
+* Generate install scripts with:
 ~~~
 ./generate_scripts.sh
 ~~~
 
-# iv) Run install scripts
-Refer to https://access.redhat.com/articles/3538491 for further details
+* Place RPMs in `rpms/` 
+
+* Create a tar archive of the directory and deliver it to the customer:
+~~~
+tar -czf <file name> <dir name>
+~~~
+
+* On the target system, extract the tarball, go to directory scripts and run:
+~~~
+cd scripts/
+bash generate_hotfix.j2.sh
+~~~
+
+If needed / desired, run:
+~~~
+bash start_hotfix_container.j2.sh
+~~~
