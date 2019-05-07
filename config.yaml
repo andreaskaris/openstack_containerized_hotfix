@@ -1,0 +1,4 @@
+bugzilla_number: 1703225
+container_registry: registry.access.redhat.com/rhosp13
+container_image_name: openstack-nova-compute
+container_name: nova_compute
