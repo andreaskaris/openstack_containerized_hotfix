@@ -1,1 +1,3 @@
-rpms/README.md
+rpms/*.rpm
+scripts/*.sh
+scripts/*.yaml
