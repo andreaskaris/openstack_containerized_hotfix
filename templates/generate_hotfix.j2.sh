@@ -1,5 +1,10 @@
 #!/bin/bash -x
 
+if ! $(echo $PWD | egrep -q '/scripts$'); then
+  echo "This file needs to be executed from directory scripts"
+  exit 1
+fi 
+
 : ${IMAGE_TAG:=$(docker images | grep "{{ container_registry }}/{{ container_image_name }}" | awk 'NR==1{print $2}')}
 
 # git clone https://github.com/openstack/ansible-role-tripleo-modify-image
