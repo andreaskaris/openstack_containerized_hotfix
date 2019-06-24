@@ -5,6 +5,6 @@
       name: tripleo-modify-image
     vars:
       tasks_from: rpm_install.yml
-      source_image: registry.access.redhat.com/rhosp13/openstack-nova-compute:{{ '{{' }} image_tag {{ '}}' }}
+      source_image: {{ container_registry }}/{{ container_image_name }}:{{ '{{' }} image_tag {{ '}}' }}
       rpms_path: /tmp/hotfix/
       modified_append_tag: -hotfix-{{ bugzilla_number }}
