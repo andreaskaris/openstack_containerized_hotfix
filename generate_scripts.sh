@@ -18,6 +18,7 @@ if [ "$JINJA" == "" ]; then
 fi
 
 for f in $(ls templates) ; do
-  echo "Converting templates/$f to scripts/$f:"
-  $JINJA templates/$f config.yaml > scripts/${f//[.]j2[.]/.}
+  destf="${f//[.]j2[.]/.}"
+  echo "Converting templates/$f to scripts/$destf:"
+  $JINJA templates/$f config.yaml > scripts/$destf
 done
