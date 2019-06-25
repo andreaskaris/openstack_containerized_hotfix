@@ -14,6 +14,7 @@ if [ "$JINJA" == "" ]; then
   echo "virtualenv jinja2-cli"
   echo "source jinja2-cli/bin/activate"
   echo "pip install jinja2-cli"
+  echo "pip install pyyaml"
   exit 1
 fi
 
