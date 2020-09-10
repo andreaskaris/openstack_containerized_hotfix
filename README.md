@@ -1,3 +1,5 @@
+> **Starting with OSP 16.1:** Follow [https://docs.openstack.org/project-deploy-guide/tripleo-docs/latest/deployment/container_image_prepare.html#building-hotfixed-containers](https://docs.openstack.org/project-deploy-guide/tripleo-docs/latest/deployment/container_image_prepare.html#building-hotfixed-containers)
+
 This is an easy process: 
 
 * Modify configuration file `config.yaml`.
